@@ -1,0 +1,33 @@
+git config --global user.name "User Name"
+git config --global user.email "your_email@example.com"
+
+
+Check for existing SSH keys
+	ls -al ~/.ssh
+	
+Generate a new SSH key
+	# Replace the email address
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+
+	# Ensure ssh agent is running
+	eval "$(ssh-agent -s)"
+	
+	# Add ssh key
+	ssh-add ~/.ssh/id_25519
+	
+	# copy the contents 
+	~/.ssh/id_ed25519.pub
+	
+	# GoTo Github and add the public key
+	# Settings > Access > SSH and GPG keys
+	
+	# Test the connection
+	ssh -T git@github.com
+	
+	# clone a repository
+	git clone https://github.com/RanjitSolomon/linux_scripting.git
+	
+	
+	
+	
+	

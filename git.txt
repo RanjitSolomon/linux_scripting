@@ -1,0 +1,28 @@
+git config --global user.name "User Name"
+git config --global user.email "your_email@example.com"
+
+#Check
+git config --global --list # To check the info you just provided
+
+# Setting up a repoisotry
+	git init
+
+# Clone a repository
+	git clone https://github.com/RanjitSolomon/linux_scripting.git
+	
+git status
+git add
+	git add README.md
+git commit -m "initial comments"
+git push
+
+
+git remote add origin https://github.com/RanjitSolomon/linux_scripting.git ?????
+git push -u origin master
+
+
+
+
+
+# Uncommit changes  (Remove the most recent commit)
+git reset HEAD~1	
