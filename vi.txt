@@ -1,0 +1,36 @@
+# Start
+vi filename
+
+# Command Mode / Edit Mode
+
+vi opens with command mode (move cursor, delete, cut, copy, paste text)
+
+
+# To enter into edit mode
+press "i"	insert
+press "a" 	append after the cursor
+press "A"	append at the end of line
+
+
+
+
+# to go back to command mode
+press ESC
+
+u	Undo the last change
+U	Undo all changes to the entire line
+dd	Delete line
+3dd	Delete 3 lines   -" which one?"
+
+dw	delete word
+4dw	delete 4 words -" which one?"
+
+x	delete character
+
+SHIFT + ZZ	save and exit
+:q!	Exit without saving
+:w	Save but keep open
+:wq	Save and Quit
+
+
+

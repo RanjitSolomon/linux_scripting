@@ -24,10 +24,16 @@ Generate a new SSH key
 	# Test the connection
 	ssh -T git@github.com
 	
-	# clone a repository
+	# clone a repository (HTTP)
 	git clone https://github.com/RanjitSolomon/linux_scripting.git
 	
+	#Need to test this (SSH)
+	git clone git@github.com:RanjitSolomon/linux_scripting.git
+
+
 	
-	
-	
+	# Push
+	git remote set-url origin git@github.com:RanjitSolomon/linux_scripting.git
+	git push
+
 	

@@ -16,6 +16,42 @@ tm=$(date +"%T")
 ne=$(whoami)
 pth=$(pwd)
 echo "Today is $dt and current time is $tm you are logged in as $ne and the path is $pth " 
-rand_num=$(( $RANDOM % 2))
+rand_num=$(( $RANDOM % 9))
 echo "Random number $rand_num"
+
+counter=1
+
+while [ $counter -le 10 ]
+do
+	echo $counter
+	((counter++))
+done
+
+counter=1
+until [ $counter -gt 10 ]
+do 
+	echo $counter
+	((counter++))
+done
+
+fruits='apple banana orange'
+for fruit in $fruits
+do 
+	echo $fruit
+done
+
+for value in {1..5}
+do
+	echo $value
+done
+
+for val in {10..0..2}
+do
+	echo $val
+done
+
+
+
+
+
 
