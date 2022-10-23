@@ -1,2 +1,2 @@
 # linux_scripting
-# Testing WSL, Github and linux scripting
+# Testing WSL, Github and Linux scripting
