@@ -1,0 +1,45 @@
+Enable Windows Features
+	- Virtual Machine
+	- Windows Sub system
+
+wsl --list --online
+
+wsl --install -d "Ubuntu-22.04"
+
+# Start a specific distro
+wsl -d "Ubuntu-22.04"
+
+# Terminate a specific
+wsl -t "Ubuntu-22.04"
+
+
+sudo apt update && sudo apt upgrade
+sudo apt install python3-pip
+sudo apt install python3-venv python3-dev
+
+mkdir tensor_environment
+cd tensor_environment
+
+python3 -m venv tensor_environment
+
+source tensor_environment/bin/activate
+
+pip install --upgrade pip
+
+sudo python3 -m pip install tensorflow
+sudo python3 -m pip show tensorflow
+
+
+ifconfig
+	If the command does not work, sudo apt install net-tools
+
+sudo apt install apache2
+sudo service apache2 start
+
+sudo apt install x11-apps -y
+sudo apt install xcalc
+sudo apt install audacity
+sudo apt install gimp
+
+
+

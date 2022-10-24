@@ -19,6 +19,8 @@ git remote set-url origin git@github.com:RanjitSolomon/linux_scripting.git
 git push
 
 
+# git push REMOTE-NAME BRANCH-NAME
+git push origin main
 
 
 
