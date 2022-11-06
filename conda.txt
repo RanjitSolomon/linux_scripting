@@ -1,0 +1,91 @@
+https://towardsdatascience.com/configuring-jupyter-notebook-in-windows-subsystem-linux-wsl2-c757893e9d69
+
+Install WSL2
+
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt autoremove
+
+lsb_release -a
+uname -r
+
+explorer.exe . 
+htop
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+(sudo apt install wget)
+
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+sh Miniconda3-latest-Linux-x86_64.sh
+
+
+conda info --envs
+
+conda update conda
+conda update --all
+
+conda install pandas scikit-learn matplotlib jupyter jupyterlab sqlalchemy seaborn pip git
+
+
+
+conda install -c conda-forge jupyter_contrib_nbextensions
+conda update conda
+conda update --all
+
+
+
+jupyter lab --no-browser
+
+
+==================================================================================
+    Installed package of scikit-learn can be accelerated using scikit-learn-intelex.
+    More details are available here: https://intel.github.io/scikit-learn-intelex
+
+    For example:
+
+        $ conda install scikit-learn-intelex
+        $ python -m sklearnex my_application.py
+===================================================================================
+
+
+
+
+
+Setting up TensorFlow
+
+Install Nvidia Drivers for Windows from: https://developer.nvidia.com/cuda/wsl/download
+
+Install nvcc inside of WSL with: sudo apt install nvidia-cuda-toolkit
+
+Check that it is there with: nvcc --version
+
+conda create --name tensorflow
+conda install tensorflow-gpu
+
+
+Then just test it with this little python program with the environment activated:
+
+import tensorflow as tf
+tf.config.list_physical_devices('GPU')
+sys_details = tf.sysconfig.get_build_info()
+cuda = sys_details["cuda_version"]
+cudnn = sys_details["cudnn_version"]
+print(cuda, cudnn)
+
+
+
+Additional
+sudo apt update && sudo apt upgrade
+python3 --version
+sudo apt install python3-pip
+sudo apt install python3-venv python3-dev
+
+mkdir tensor_environment
+cd tensor_environment
+Python3 -m venv tensorenvironment
+source tensorenvironment/bin/activate
+pip install --upgrade pip
+
+sudo python3 -m pip install tensorflow
+sudo python3 -m pip show tensorflow
