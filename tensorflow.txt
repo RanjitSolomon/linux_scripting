@@ -1,0 +1,18 @@
+Install Nvidia driver for windows
+install nvcc inside of WSL with "sudo apt install nvidia-cuda-toolkit"
+check with "nvcc --version"
+
+conda create --name tensorflow
+conda activate tensorflow
+conda install tensorflow-gpu
+
+
+
+import tensorflow as tf
+tf.config.list_physical_devices('GPU')
+sys_details = tf.sysconfig.get_build_info()
+cuda = sys.details["cuda_version"]
+cudnn = sys_details["cudnn_version"]
+print(cuda, cudnn)
+
+
