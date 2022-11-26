@@ -82,5 +82,38 @@ esac
 # AND &&
 
 
+# BASH SCRIPTS
+# Executed with source or sh
+
+# chmod +x script.sh   make it executable
+
+# MULTI LINE
+#   \
+
+# echo "for i in {1..2}; do echo \
+# \ "Welcome \$i times\"; done" > test.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

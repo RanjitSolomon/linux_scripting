@@ -1,0 +1,76 @@
+pip install pandas
+
+
+import pandas as pd
+df = pd.read_csv("file.csv")
+
+# View the data
+df.head()  df.head(5)
+df.tail()
+
+df.info()
+
+# data from certain rows (14)
+df.iloc[14:, :]
+
+# data types
+df.dtypes
+
+# index
+df.index
+
+df.index.year
+
+df.index.year.value_counts().sort_index()
+
+# Removing leading and trailing spaces
+df["column_name"] = df["column_name"].str.strip()
+
+# column names to lower
+df.columns = df.columns.str.lower()
+
+# Drop columns
+df = df.drop(["column_name"], axis=1)
+
+# create a new dataframe excluding some columns
+df = df.columns[~df.columns.isin(["column_one", "coloumn_two"])]
+
+# Missing data
+df["column_name"].isnull()
+
+# Drop missing data
+df.dropna(inplace=True)
+
+# fill a null value with previous
+df = df.ffill()
+
+df.apply(pd.isnull).sum()
+null_pct = df.apply(pd.isnull).sum()/df.shape[0] #rows
+
+# column names if the percentage less than 0.05
+df_valid_col_name = df.columns[null_pct < 0.05]
+
+# Dataframe with the valid names 
+df = df[df_valid_col_name].copy()
+
+
+# plot()
+df['col_name'].plot()
+
+
+
+# Create a new column in a row from previous row coloumn name
+df['next_column'] = df.shift(-1)["previous_column"] 
+
+
+# Correlation
+df.corr()
+
+
+
+
+
+
+
+
+

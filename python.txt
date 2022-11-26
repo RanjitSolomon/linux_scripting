@@ -1,0 +1,45 @@
+# Get an int input from user
+t = int(input())
+
+# Loop thorugh
+for i in range(t):
+
+# Assign int values to two variables (space separated input from user)
+X, Y = map(int, input().split())
+
+# Assign space separated input to a list 
+X = []
+X = input().split()
+X = [int(i) for i in X] # convert to int
+
+# OR
+X = list(map(int, input().split())
+
+# Sort Them
+X .sort()
+print(X[1])  # print the second element
+
+# return index of min/max value in a list
+x = [100,200,300]
+max_index = max(range(len(x), key=x.__getitem__))
+
+# OR
+max_index = x.index(max(x))
+
+
+# One line if else
+'YES' if x>y else 'NO'
+
+print(f'{"yes" if int(input()) > 4 else "no"}')
+
+
+
+
+
+
+
+
+
+
+
+

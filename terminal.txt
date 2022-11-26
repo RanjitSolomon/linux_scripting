@@ -1,0 +1,193 @@
+tmux   		- terminal multiplexer
+
+PROCESS
+		ps
+		top
+		htop
+		vtop		
+		nvtop		- GPU process
+
+MONITOR
+		sudo apt install sysstat
+		mpstat		CPU activity
+
+		vmstat		RAM, processes, buffer, cache, 
+
+		iostat		storage input output
+
+		sar 10		cpu utilizaton every 10 seconds
+		sar 2 8		every two seconds for 8 iterations
+
+		sudo apt install nethogs
+		nethogs		network utilization
+
+		tcpdump -i interface	TCP/IP packets analyzer
+
+		sudo apt install net-tools
+		netstat -a | more		incoming outgoing network traffic statistics
+`
+
+
+pwd		- present working directory
+ls	- list files
+		ls -a	list all files
+		ls -la
+		ls -GFlash --color	setup alias lc for this
+
+cd	- change directory
+		cd ~	change to home directory
+		cd <dir>	change to this <dir>	cd test
+		cd -	recent directory
+; semi colon
+		ls; pwd
+
+&&
+		cd /test && pwd		change directory and show the current working directory
+
+&
+		gedit &			execute the command and display prompt for next
+
+HELP
+		man/-h/--help		cd -h, man cd, cd --help
+
+
+		
+
+VIEW/EDIT Files
+head/tail/cat/less/more
+		head test.txt		first 10 lines
+		head -n 3 test.txt	first 3 lines
+		tail test.txt		last 10 lines
+		tail -n 3 test.txt	last 3 lines
+		tail -n +5 test.txt	from 5th to last line
+		cat file
+		cat file1 file2		display file1 and then file2
+
+CREATE files
+		touch file.txt
+		nano file.txt
+		vi file.txt
+
+REMOVE files
+		rm file.txt
+
+
+
+CREATE/DELETE Directory
+		mkdir test_dir
+		rmdir test_dir		delete empty directory
+		rm -rf test_dir
+
+MOVE/COPY/LINKS
+		mv file1 file2
+		cp file1 ./test/
+		ln test1.txt te		vi te
+
+DIRECTORY TREES
+		mkdir dir
+		mkdir -p dir1/dir2/dir3
+
+		TREE
+		sudo apt install tree
+		tree
+		tree -L 2		restrict levels
+		tree -prune		hides empty directory
+
+DISK USAGE
+		df			show the used disk space of each file and folder
+		df -h			show the space used by directories
+		du			disk usage
+		du -h --max-depth=1	directory n level
+
+PASSWORD / LOGOUT / EXIT
+		passwd			change password
+		logout			exit the shell
+		exit			exit the shell
+		clear			clear the terminal
+
+DISK/MEMORY/
+		sudo apt install ncdu
+		ncdu			NCurses Disk Usage improved du
+
+-version / --version / -v
+		ls --version
+
+Environment Variables
+		printenv
+
+SET ENVIRONMENT
+		myvar=hello
+		echo $myvar
+		myvar="Hello, World!" && echo $myvar
+
+		export myvar="another one" && $myvar
+
+		unset myvar
+
+ALIASES
+		lc="ls -l -a -h -t"
+		alias lc="ls -l -a -h -t"
+
+		unalias lc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
