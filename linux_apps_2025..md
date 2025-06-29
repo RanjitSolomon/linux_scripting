@@ -1,6 +1,6 @@
-## Top 10 INSANE Linux Apps You SHOULD BE USING in 2025! (#4 Blew My Mind)
-
-https://www.youtube.com/watch?v=RTwOvogeEVs      
+## Top 10 INSANE Linux Apps You SHOULD BE USING in 2025! (#4 Blew My Mind)     
+         
+https://www.youtube.com/watch?v=RTwOvogeEVs       
     
 Setup Snap:     
 https://snapcraft.io/docs/installing-snapd    
