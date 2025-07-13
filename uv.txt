@@ -1,0 +1,110 @@
+Install 
+# On Windows.
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+uv version
+
+# Create of a new Python project
+uv init explore-uv
+uv init --python x:xx project_name
+uv init --python 3:12 project_name
+
+    - .gitignore
+    - .python-version
+    - README.md
+    - hello.py
+    - pyproject.toml # This file contains all the information about tools used to build the project.
+    - .uv.lock # It is used to create the virtual environment when you use uv to run the script (it can be compared to the requierements.txt)
+
+uv add package_name
+uv add scikit-learn xgboost
+# A .venv/ directory appears.
+# Finally, UV updates the pyproject.toml and uv.lock files after each add command.
+
+uv remove package_name
+
+uv run hello.py
+
+
+
+uv python list
+
+
+# At any time, it is possible to change the Python version of your project.
+# To do that, you have to modify the line requires-python in the pyproject.toml file.
+
+# For instance: requires-python = “>=3.9”
+
+# Then you have to synchronize your environment using the command:
+uv sync
+
+
+# But the new environment does not have the required package. Thus, after a sync command, you have to type:
+uv pip install -e .
+
+
+# initiated with pip and virtualenv and wish to use UV, 
+pip freeze > requirements.txt
+uv init .
+uv pip install -r requirements.txt
+
+
+-------------------------------------------------------
+ pip                               |  uv
+ -------------------------------------------------------
+ python -m venv venv                | uv venv 
+ pip install package                | uv add package 
+ pip install -r requirements.txt    | uv pip 
+ pip uninstall package              | uv remove package 
+ pip freeze                         | uv pip freeze 
+ pip list                           | uv pip list
+
+
+
+# USE THE tools
+=================
+# Tools are Python packages that provide command interfaces for such as ruff, pytests, mypy, etc.
+uv tool install tool_name
+
+# But, a tool can be used without having been installed
+uv tool run tool_name  
+
+
+# an alias was created: uvx, which is equivalent to uv tool run. So, to run a tool, just type:
+uvx tool_name
+
+
+Reference 
+1 — UV documentation: https://docs.astral.sh/uv/
+2 — UV GitHub repository: https://github.com/astral-sh/uv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
